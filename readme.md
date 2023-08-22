@@ -1,0 +1,1 @@
+An app to provide RTK readers with a useful practice and research tool. Learn kanji using mnemonics with a spaced repetition system.6
