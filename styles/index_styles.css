@@ -1,0 +1,94 @@
+body {
+    width: 90%;
+    height: 90%;
+    font-size: 2rem;
+}
+
+main {
+    max-width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+    margin: 0;
+}
+
+.selected {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.selected h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: .10rem;
+}
+
+.play-button {
+    display: block;
+    width: 350px;
+    height: 200px;
+    border-radius: 3%;
+    cursor: pointer;
+    background-color: white;
+}
+
+.play-button a {
+    display: inline-block;
+    width: 100%; /* not working, must be same size as play button */
+    height: 100%;
+}
+
+.selected p {
+    font-weight: 400;
+    margin-bottom: 5vh;
+}
+
+main button {
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: .15rem;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+main > button {
+    margin-right: 4vw;
+}
+
+main > button:last-child {
+    margin-right: 0;
+}
+
+main > button:nth-child(-n + 4)::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 4px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 1.5vw);
+    cursor: default;
+    background-color: white;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
