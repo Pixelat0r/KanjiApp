@@ -18,4 +18,11 @@ html {
     font-family: 'Roboto', sans-serif;
     width: 100%;
     height: 100%;
+    background-color: #494949;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+    margin: 0;
 }

@@ -1,0 +1,61 @@
+body {
+    width: 90%;
+    height: 90%;
+    font-size: 2rem;
+}
+
+main {
+    max-width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: row wrap;
+}
+
+.back-btn {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-right: 37%;
+    cursor: pointer;
+}
+
+.keyword {
+    letter-spacing: .10rem;
+}
+
+.result-container {
+    width: 40%;
+    height: 40%;
+    color: inherit;
+    display: flex;
+    flex-flow: column wrap;
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 1% 5% 1% 5%;
+}
+
+.card-num {
+    letter-spacing: .20rem;
+}
+
+.card-kanji {
+    font-weight: 500;
+}
+
+.card-strokes {
+    margin-top: 8rem;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.card-primitives {
+    margin-bottom: 8rem;
+    font-weight: 500;
+}
+
+.card-kanji {
+    font-size: 12rem;
+    transform: translate(-120%, -40%);
+}
