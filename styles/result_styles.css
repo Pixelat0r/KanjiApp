@@ -1,7 +1,12 @@
 body {
     width: 90%;
     height: 90%;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin: 5%;
+}
+
+body * {
+    margin: 0;
 }
 
 main {
@@ -15,47 +20,100 @@ main {
 }
 
 .back-btn {
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin-right: 37%;
-    cursor: pointer;
+    display: none;
 }
 
-.keyword {
-    letter-spacing: .10rem;
+.card-keyword {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 500;
 }
 
 .result-container {
-    width: 40%;
-    height: 40%;
+    width: 100%;
+    max-width: 800px;
+    max-height: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr 2fr 4fr;
+    grid-template-areas: 
+        "pos kanji"
+        "strokes kanji"
+        "primitives ."
+        "story story";
     color: inherit;
-    display: flex;
-    flex-flow: column wrap;
     border: 3px solid;
     border-radius: 10px;
-    padding: 1% 5% 1% 5%;
+    padding: 5%;
 }
 
-.card-num {
-    letter-spacing: .20rem;
+.card-pos {
+    grid-area: pos;
+    letter-spacing: .10rem;
 }
 
 .card-kanji {
-    font-weight: 500;
+    grid-area: kanji;
+    font-size: 6rem;
+    justify-self: center;
 }
 
 .card-strokes {
-    margin-top: 8rem;
-    margin-bottom: 0;
+    grid-area: strokes;
     font-weight: 500;
 }
 
 .card-primitives {
-    margin-bottom: 4rem;
+    grid-area: primitives;
     font-weight: 500;
 }
 
-.card-kanji {
-    font-size: 12rem;
-    transform: translate(-120%, -40%);
+.card-story {
+    grid-area: story;
+}
+
+@media (min-width: 400px) {
+    .card-kanji {
+        font-size: 8rem;
+    }   
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 1.7rem;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-keyword {
+        margin-bottom: 2rem;
+    }
+
+    .result-container {
+    width: 70%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr 1fr 2fr 2fr;
+    grid-template-areas:
+        "pos . kanji kanji"
+        "strokes . kanji kanji"
+        "primitives . kanji kanji"
+        "story story story story";
+    border: 5px solid;
+    padding: 4rem;
+    }
+
+    .card-kanji {
+        font-size: 10rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        font-size: 2rem;
+    }
+    
+    .card-kanji {
+        font-size: 12rem;
+    }
 }
