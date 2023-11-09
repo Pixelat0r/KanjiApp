@@ -54,7 +54,7 @@ main {
 
 .card-kanji {
     grid-area: kanji;
-    font-size: 6rem;
+    font-size: 8rem;
     justify-self: center;
 }
 
@@ -74,13 +74,17 @@ main {
 
 @media (min-width: 400px) {
     .card-kanji {
-        font-size: 8rem;
-    }   
+        font-size: 10rem;
+    }
+
+    .result-container {
+        width: 85%;
+    }
 }
 
 @media (min-width: 600px) {
     body {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
         margin: 0;
         width: 100%;
         height: 100%;
@@ -108,12 +112,14 @@ main {
     }
 }
 
+@media (min-width: 800px) {
+    .card-kanji {
+        font-size: 12rem;
+    }
+}
+
 @media (min-width: 1000px) {
     body {
         font-size: 2rem;
-    }
-    
-    .card-kanji {
-        font-size: 12rem;
     }
 }

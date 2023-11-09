@@ -67,7 +67,7 @@ h1 {
 
 .keyword-submit:hover {
     background-color: lightblue;
-    color: black;
+    color: #282828ff;
 }
 
 @media (min-width: 600px) {
